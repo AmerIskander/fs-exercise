@@ -22,9 +22,7 @@ export class CustomTableComponent {
 
   ngOnInit() {
     this.dataSource.data = this.tableData; // Set the table data
-    setTimeout(() => {
-      this.dataSource.paginator = this.paginator ?? null;
-    }, 5000);
+    this.dataSource.paginator = this.paginator ?? null;
   }
 }
 
