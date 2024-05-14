@@ -10,4 +10,8 @@
         padding: 20px;
         margin: 10px;
     }
+
+    @media screen and (max-width: 1230px) {
+        flex-direction: column;
+    }
 }

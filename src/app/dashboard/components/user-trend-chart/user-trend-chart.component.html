@@ -1,8 +1,48 @@
 <div class="user-trend-chart">
     <div class="header">
         <div class="top-banner">
-
+          <mat-icon aria-hidden="false" aria-label="Download" svgIcon="download"></mat-icon>
         </div>
     </div>
-    <app-line-chart [chartData]="chartData" [chartTitle]="title"></app-line-chart>
+    <div class="line-chart-user-trend">
+        <div class="upper-panel">
+            <mat-icon aria-hidden="false" aria-label="Trending Up" svgIcon="trending_up"></mat-icon>
+            <span class="chart-title">{{title}}</span>
+            <div class="dropdown">
+                <button mat-button [matMenuTriggerFor]="menu" #trigger="matMenuTrigger">Daily Actives</button>
+                <mat-menu #menu="matMenu" class="menu-form-wrapper" [hasBackdrop]="false">
+                  <div (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+                    <div class="popup">
+                      <div class="menu-form">
+                        <div>
+                          <input matInput type="checkbox">
+                          <span class="title">Daily Actives</span>
+                        </div>
+                        <div>
+                          <input matInput type="checkbox">
+                          <span class="title">Weekly Actives</span>
+                        </div>
+                        <div>
+                          <input matInput type="checkbox">
+                          <span class="title">Monthly Actives</span>
+                        </div>                
+                      </div>
+                      <div class="menu-form-bottom">
+                        <div>
+                          <input matInput type="checkbox">
+                          <span class="title">
+                            Compare to perior period
+                          </span>
+                        </div>
+                          <span class="details">
+                            Available when one trendline is plotted
+                          </span>                        
+                      </div>
+                    </div>
+                  </div>
+                </mat-menu>
+            </div>
+        </div>
+        <app-line-chart [chartData]="chartData" [chartTitle]="title"></app-line-chart>
+    </div>
 </div>

@@ -1,6 +1,8 @@
 <div class="line-chart">
   <highcharts-chart
+  *ngIf="isHighcharts"
   [Highcharts]="Highcharts"
+  [constructorType]="chartConstructor"
   [options]="chartOptions"
   style="width: 100%; height: 400px;"
 ></highcharts-chart>

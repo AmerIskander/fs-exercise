@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input, ViewChild } from '@angular/core';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
@@ -7,7 +6,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-custom-table',
   standalone: true,
-  imports: [MatPaginatorModule, MatTableModule, CommonModule],
+  imports: [MatPaginatorModule, MatTableModule],
   templateUrl: './custom-table.component.html',
   styleUrl: './custom-table.component.css'
 })

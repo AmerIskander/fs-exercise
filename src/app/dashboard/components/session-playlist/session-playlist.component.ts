@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CustomTableComponent } from '../../../shared/custom-table/custom-table.component';
-import { CommonModule } from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-session-playlist',
   standalone: true,
-  imports: [CustomTableComponent, CommonModule, MatTooltipModule, MatButtonModule],
+  imports: [CustomTableComponent, MatTooltipModule, MatButtonModule],
   templateUrl: './session-playlist.component.html',
   styleUrl: './session-playlist.component.css',
 })

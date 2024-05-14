@@ -1,2 +1,99 @@
+@import "@angular/material";
+
 .user-trend-chart {
+    .top-banner {
+        .mat-icon {
+            cursor: pointer;
+            opacity: 0.5;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .upper-panel {
+        margin-bottom: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        mat-icon {
+            width: 70px;
+            height: 70px;
+
+            svg {
+                fill: blue;
+            }
+        }
+    }
+
+    .dropdown {
+        button {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: gray;
+
+            &::after {
+                content: "\003E";
+                transform: rotate(90deg);
+                color: cornflowerblue;
+            }
+
+            &.mat-button:hover {
+                background-color: transparent !important;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.mat-mdc-menu-content {
+    border: 1px solid blue;
+    padding: 0;
+}
+
+.popup {
+    font-size: 12px;
+    padding: 10px;
+
+    & , & > * {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-form,
+    .menu-form-bottom {
+        & > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        margin-left: 3px;
+    }
+
+    .details {
+        font-size: 10px;
+        padding-left: 24px;
+        color: gray;
+        line-height: normal;
+    }
+
+    .menu-form {
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 10px;
+    }
+
+    .menu-form-bottom {
+        padding-top: 10px;
+    }
 }
