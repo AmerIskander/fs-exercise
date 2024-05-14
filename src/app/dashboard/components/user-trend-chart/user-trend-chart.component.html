@@ -1,7 +1,18 @@
 <div class="user-trend-chart">
     <div class="header">
         <div class="top-banner">
-          <mat-icon aria-hidden="false" aria-label="Download" svgIcon="download"></mat-icon>
+          <span>
+            <div class="new-content" [ngClass]="{'visible': showNewIconAndText}"  (mouseenter)="showNewIconAndText = true" (mouseleave)="showNewIconAndText = false">
+                <mat-icon aria-hidden="false" aria-label="Schedule" svgIcon="schedule" class="schedule"></mat-icon>
+                <span class="message schedule">2 minutes ago</span>
+                <mat-icon aria-hidden="false" aria-label="Refresh" svgIcon="refresh" class="refresh"></mat-icon>
+                <span class="message refresh">Refresh Data</span>
+              </div>
+          </span>
+          <span>
+            <mat-icon aria-hidden="false" aria-label="Download" svgIcon="download"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Fullscreen" svgIcon="fullscreen"></mat-icon>  
+          </span>
         </div>
     </div>
     <div class="line-chart-user-trend">

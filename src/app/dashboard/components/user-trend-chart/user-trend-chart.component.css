@@ -2,6 +2,12 @@
 
 .user-trend-chart {
     .top-banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span > * {
+            padding: 4px;
+        }
         .mat-icon {
             cursor: pointer;
             opacity: 0.5;
@@ -11,6 +17,42 @@
             }
         }
     }
+
+      .new-content {
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        span {
+            font-weight: 700;
+            font-size: 12px;
+            margin-left: 3px;
+        }
+        .schedule {
+            display: block;
+            &.message {
+                color: gray;
+            }
+        }
+
+        .refresh {
+            display: none;
+            &.message {
+                color: blue;
+            }
+        }
+
+        &.visible {
+            .schedule {
+                display: none;
+            }
+            .refresh {
+                display: block;
+            }
+          }    
+      }
+    
     .upper-panel {
         margin-bottom: 50px;
         text-align: center;
